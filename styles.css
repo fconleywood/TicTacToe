@@ -1,0 +1,15 @@
+body {
+  background-color: #FF7F50,
+
+}
+
+.grid {
+
+
+}
+
+td {
+border: 1px solid black;
+box-sizing: border-box;
+background-color: red;
+}
