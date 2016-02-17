@@ -1,5 +1,4 @@
 
-
 $(document).on('ready', function() {
   var turn = 0;
   var oSquares = [];
@@ -32,10 +31,12 @@ $(document).on('ready', function() {
 
           for (var a = 0; a < xSquares.length; a++) {
             for (var b = a + 1; b < xSquares.length; b++) {
-              for (var k = b + 1; c < xSquares.length; c++) {
+              for (var c = b + 1; c < xSquares.length; c++) {
                 if ((xSquares[a]) + (xSquares[b]) + (xSquares[c]) === 15) {
+                  $("span").attr("class","confetti");
                   alert("Raccoon Wins!");
                   resetGame();
+                  return;
                 }
               }
             }
@@ -44,6 +45,7 @@ $(document).on('ready', function() {
             for (var b = a+1; b < oSquares.length; b++) {
               for (var c = b+1; c < oSquares.length; c++) {
                 if ((oSquares[a]) + (oSquares[b]) + (oSquares[c]) === 15) {
+                  $("span").attr("class","confetti");
                   alert("Cat Wins!");
                   resetGame();
                   return;
